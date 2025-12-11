@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+:root {
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0%, 0%);
+  --body-font: "Poppins", sans-serif;
+  --h1-font-size: 2rem;
+  --normal-font-size: 1rem;
+  --small-font-size: .813rem;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body,
+input,
+button {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.register {
+  position: relative;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.login__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.reg__form {
+  position: relative;
+  margin-inline: 1.5rem;
+  background-color: hsla(0, 0%, 100%, .01);
+  border: 2px solid hsla(0, 0%, 100%, .7);
+  padding: 2.5rem 1rem;
+  color: var(--white-color);
+  border-radius: 1rem;
+}
+
+.reg__title {
+  text-align: center;
+  font-size: var(--h1-font-size);
+  margin-bottom: 1.25rem;
+}
+
+.reg__inputs, 
+.reg__box {
+  display: grid;
+}
+
+.reg__inputs {
+  row-gap: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.reg__box {
+  grid-template-columns: 1fr max-content;
+  column-gap: .75rem;
+  align-items: center;
+  border: 2px solid hsla(0, 0%, 100%, .7);
+  padding-inline: 1.25rem;
+  border-radius: 4rem;
+}
+
+.reg__input, 
+.reg__button {
+  border: none;
+  outline: none;
+}
+
+.reg__input {
+  width: 100%;
+  background: none;
+  color: var(--white-color);
+  padding-block: 1rem;
+}
+
+.reg__input::placeholder {
+  color: var(--white-color);
+}
+
+.reg__box i {
+  font-size: 1.25rem;
+}
+
+.reg__check, 
+.reg__check-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reg__check {
+  margin-bottom: 1rem;
+  font-size: var(--small-font-size);
+}
+
+.reg__check-box {
+  column-gap: .5rem;
+}
+
+.reg__check-input {
+  width: 1rem;
+  height: 1rem;
+  accent-color: var(--white-color);
+}
+
+.reg__forgot {
+  color: var(--white-color);
+}
+
+.reg__forgot:hover {
+  text-decoration: underline;
+}
+
+.reg__button {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: var(--white-color);
+  border-radius: 4rem;
+  color: var(--black-color);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.register__login {
+  font-size: var(--small-font-size);
+  text-align: center;
+}
+
+.register__login a {
+  color: var(--white-color);
+  font-weight: 500;
+}
+
+.register__login a:hover {
+  text-decoration: underline;
+}
+
+.alert {
+    background: #4CAF50;
+    color: white;
+    padding: 15px;
+    margin: 15px auto;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: 600;
+    animation: fadeIn .4s ease-in-out;
+}
+
+.register__login a {
+    color: #4a8cff;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    transition: all .3s ease;
+}
+
+.register__login a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -2px;
+    background: #4a8cff;
+    transition: width .3s ease;
+}
+
+.register__login a:hover {
+    color: #1b6cff;
+    transform: translateY(-2px);
+}
+
+.register__login a:hover::after {
+    width: 100%;
+}
+
+body.page-fade {
+    opacity: 0;
+    animation: fadeIn .5s forwards ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-out {
+    animation: fadeOut .4s forwards ease;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+
+
+@media screen and (min-width: 576px) {
+  .reg {
+    justify-content: center;
+  }
+  .reg__form {
+    width: 420px;
+    padding-inline: 2.5rem;
+  }
+  .reg__title {
+    margin-bottom: 2rem;
+  }
+}
